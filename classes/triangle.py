@@ -4,10 +4,10 @@ import math
 
 
 class Triangle:
-    def __init__(self, vertex_1=tuple, vertex_2=tuple, vertex_3=tuple):
-        self.vertex_1 = Vertex(vertex_1[0], vertex_1[1], vertex_1[2])
-        self.vertex_2 = Vertex(vertex_2[0], vertex_2[1], vertex_2[2])
-        self.vertex_3 = Vertex(vertex_3[0], vertex_3[1], vertex_3[2])
+    def __init__(self, vertex_1=Vertex, vertex_2=Vertex, vertex_3=Vertex):
+        self.vertex_1 = vertex_1
+        self.vertex_2 = vertex_2
+        self.vertex_3 = vertex_3
 
     def get_area(self):
         length_a = Edge(self.vertex_1, self.vertex_2).get_length()

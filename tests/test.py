@@ -14,20 +14,20 @@ class Test(unittest.TestCase):
         self.assertEqual(parse_vertex_line(line), (0, 0, 0))
 
     def test_get_total_area(self):
-        triangles = [Triangle((0, 0, 0), (1, 0, 0), (1, 1, 1)), Triangle(
-            (0, 0, 0), (0, 1, 1), (1, 1, 1))]
+        triangles = [Triangle(Vertex(0, 0, 0), Vertex(1, 0, 0), Vertex(1, 1, 1)), Triangle(
+            Vertex(0, 0, 0), Vertex(0, 1, 1), Vertex(1, 1, 1))]
 
         self.assertEqual(get_total_area(triangles), 1.4142135623730956)
 
-    def test_get_result(self):
+    def test_get_result_string(self):
         number_of_triangles = 5
         surface_area = 10.0
 
-        self.assertEqual(get_result(number_of_triangles, surface_area),
+        self.assertEqual(get_result_string(number_of_triangles, surface_area),
                          'Number of Triangles: 5\nSurface area: 10.0')
 
     def test_triangle_get_area(self):
-        triangle = Triangle((0, 0, 0), (1, 0, 0), (1, 1, 1))
+        triangle = Triangle(Vertex(0, 0, 0), Vertex(1, 0, 0), Vertex(1, 1, 1))
 
         self.assertEqual(triangle.get_area(), 0.7071067811865478)
 
