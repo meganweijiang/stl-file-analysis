@@ -24,20 +24,19 @@ def analyze_stl_file():
 
             vertices = []
 
-    return print_result(len(triangles), get_total_area(triangles))
+    return print(get_result(len(triangles), get_total_area(triangles)))
 
 
-def parse_vertex_line(line):
+def parse_vertex_line(line: str):
     return tuple(map(float, filter(None, line.replace(VERTEX_PREFIX, '').replace('\n', '').split(' '))))
 
 
-def get_total_area(triangles):
+def get_total_area(triangles: list):
     return sum(map(lambda triangle: triangle.get_area(), triangles))
 
 
-def print_result(triangle_count, total_area):
-    print('Triangle count: ' + str(triangle_count))
-    print('Surface area: ' + str(total_area))
+def get_result(triangle_count: int, surface_area: float):
+    return('Number of Triangles: ' + str(triangle_count) + '\nSurface area: ' + str(surface_area))
 
 
 if __name__ == '__main__':
