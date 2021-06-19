@@ -19,10 +19,10 @@ python -m unittest tests/test.py -b
 ## Design Explanation
 
 - The individual components of the triangles were very clear classes, hence the creation of the `Vertex`, `Edge`, and `Triangle` classes
-- The `fileinput` module was used to simplify file reading, and allowed for easy interchanging between files
 - The STL file segments followed a clear pattern, so certain lines provided distinction between the end of a triangle vs. the next triangle
 - Heron's formula was used for the area calculations
 - I wanted to use some of the functional features of Python, such as `lambda` and `filter` functions
+- Added CI through Github Actions to automate build checks for different versions, linting, running unit tests, and producing a code coverage report
 
 ## Potential Improvements
 
