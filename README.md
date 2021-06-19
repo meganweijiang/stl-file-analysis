@@ -2,7 +2,7 @@
 
 ## How to Run
 
-Make sure you have Python >= 3.4 installed
+Make sure you have Python >= 3.7 installed
 To run the project, from the root directory run:
 
 ```
