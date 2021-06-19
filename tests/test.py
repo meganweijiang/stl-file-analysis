@@ -1,13 +1,18 @@
 from classes.edge import Edge
 from classes.triangle import Triangle
 from classes.vertex import Vertex
-
 from main import *
+from unittest.mock import patch
 
 import unittest
 
 
 class Test(unittest.TestCase):
+    def test_analyze_stl_file(self):
+        with patch('sys.argv', ['', './input/SimplePart.stl']):
+            self.assertEqual(
+                analyze_stl_file(), 'Number of Triangles: 2\nSurface area: 1.4142135623730956')
+
     def test_parse_vertex_line(self):
         line = 'vertex 0 0 0\n'
 

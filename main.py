@@ -2,6 +2,7 @@ from classes.vertex import Vertex
 from classes.triangle import Triangle
 
 import fileinput
+import sys
 
 FILE_ENDING = 'endsolid'
 VERTEX_PREFIX = 'vertex'
@@ -13,7 +14,7 @@ def analyze_stl_file():
 
     vertices = []
 
-    for line in fileinput.input():
+    for line in fileinput.input(sys.argv[1]):
         if (FILE_ENDING) in line:
             break
         elif (VERTEX_PREFIX) in line:
@@ -32,7 +33,10 @@ def analyze_stl_file():
 
     number_of_triangles = len(triangles)
     total_area_of_triangles = get_total_area(triangles)
-    return print(get_result_string(number_of_triangles, total_area_of_triangles))
+
+    result = get_result_string(number_of_triangles, total_area_of_triangles)
+    print(result)
+    return result
 
 
 def parse_vertex_line(line: str):

@@ -13,7 +13,7 @@ You may also try with the `Moon.stl` file in the `input` folder, or your own val
 To run the tests, from the root directory run:
 
 ```
-python -m unittest tests/test.py
+python -m unittest tests/test.py -b
 ```
 
 ## Design Explanation
