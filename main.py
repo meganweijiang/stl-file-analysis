@@ -34,9 +34,7 @@ def analyze_stl_file():
     number_of_triangles = len(triangles)
     total_area_of_triangles = get_total_area(triangles)
 
-    result = get_result_string(number_of_triangles, total_area_of_triangles)
-    print(result)
-    return result
+    return get_result_string(number_of_triangles, total_area_of_triangles)
 
 
 def parse_vertex_line(line: str):
@@ -52,4 +50,4 @@ def get_result_string(triangle_count: int, total_area: float):
 
 
 if __name__ == '__main__':
-    analyze_stl_file()
+    print(analyze_stl_file())
