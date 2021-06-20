@@ -2,18 +2,18 @@
 
 ## How to Run
 
-Make sure you have Python >= 3.7 installed
+Make sure you have Python >= 3.7 installed.\
 To run the project, from the root directory run:
 
 ```
 python main.py ./input/SimplePart.stl
 ```
 
-You may also try with the `Moon.stl` file in the `input` folder, or your own valid `.stl` file
+You may also try with the `Moon.stl` file in the `input` folder, or your own valid `.stl` file.\
 To run the tests, from the root directory run:
 
 ```
-python -m unittest tests/test.py -b
+python -m unittest tests/test.py
 ```
 
 ## Design Explanation
