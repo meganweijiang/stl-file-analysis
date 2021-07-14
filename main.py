@@ -25,6 +25,15 @@ def analyze_stl_file():
             vertices.append(vertex)
         elif (LOOP_END) in line:
             triangle = Triangle(vertices[0], vertices[1], vertices[2])
+
+            for existing_triangle in triangles:
+                for index, vertex in enumerate(vertices):
+                    if existing_triangle.vertex_1 != vertex and existing_triangle.vertex_2 != vertex and existing_triangle.vertex_3 != vertex:
+                        break
+
+                    if index == 2:
+                        raise Exception('Duplicate triangle detected')
+
             triangles.append(triangle)
 
             vertices = []
